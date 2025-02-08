@@ -20,10 +20,10 @@ const Navbar: React.FC = () => {
           <Link href="/">HOME</Link>
         </li>
         <li style={styles.navItem}>
-          <Link href="/about">ABOUT US</Link>
+          <Link href="/about">ABOUT US</Link> {/* Link to the about folder */}
         </li>
         <li style={styles.navItem}>
-          <Link href="/gallery">GALLERY</Link>
+          <Link href="/contact">CONTACT</Link>
         </li>
         <li style={styles.navItem}>
           <Link href="/marketplace">MARKETPLACE</Link>
@@ -49,7 +49,7 @@ const styles = {
   },
   logoImage: {
     height: '60px',
-    width: '60px,' // Increased height for a bigger logo
+    width: '60px', // Corrected width property
   },
   navList: {
     listStyle: 'none',

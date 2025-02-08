@@ -11,74 +11,25 @@ const Homepage: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div style={styles.container}>
-      <div style={styles.textContainer}>
-        <h1 style={{ ...styles.title, fontFamily: irishGrover.style.fontFamily }}>WELCOME TO RAPMART</h1>
-        <p style={{ ...styles.description, fontFamily: irishGrover.style.fontFamily }}>
+    <div className="flex justify-between items-center p-8">
+      <div className="flex-1 text-center">
+        <h1 className={`text-4xl font-bold text-black ${irishGrover.className}`}>WELCOME TO RAPMART</h1>
+        <p className={`text-base mt-4 text-black ${irishGrover.className}`}>
           We are selling hard to find authentic popmart products with reasonable prices. Want to know more?
         </p>
         <button
-          style={{
-            ...styles.button,
-            ...(isHovered ? styles.buttonHover : {}),
-            fontFamily: irishGrover.style.fontFamily,
-          }}
+          className={`mt-4 px-4 py-2 text-base text-white bg-[#7886C7] border-none rounded cursor-pointer transition-colors duration-300 ${irishGrover.className} ${isHovered ? 'bg-[#5a6ba3]' : ''}`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           ABOUT US
         </button>
       </div>
-      <div style={styles.imageContainer}>
-        <img src="/LABUBUHOME.png" alt="Popmart Products" style={styles.image} />
+      <div className="flex-1 text-right">
+        <img src="/LABUBUHOME.png" alt="Popmart Products" className="max-w-full h-auto" />
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '2rem',
-  },
-  textContainer: {
-    flex: 1,
-    textAlign: 'center' as 'center', // Center align the text
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    color: 'black', // Set text color to black
-  },
-  description: {
-    fontSize: '1rem',
-    marginTop: '1rem',
-    color: 'black', // Set text color to black
-  },
-  button: {
-    marginTop: '1rem',
-    padding: '0.5rem 1rem',
-    fontSize: '1rem',
-    color: '#fff',
-    backgroundColor: '#7886C7',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease', // Add transition for smooth hover effect
-  },
-  buttonHover: {
-    backgroundColor: '#5a6ba3', // Darker shade for hover effect
-  },
-  imageContainer: {
-    flex: 1,
-    textAlign: 'right' as 'right',
-  },
-  image: {
-    maxWidth: '100%',
-    height: 'auto',
-  },
 };
 
 export default Homepage;
