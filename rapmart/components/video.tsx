@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoComponent: React.FC = () => {
     return (
-        <div style={{ backgroundColor: '#A9B5DF', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ backgroundColor: '#FFF2F2', height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <iframe
                 width="600"
                 height="350"

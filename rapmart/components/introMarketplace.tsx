@@ -10,54 +10,23 @@ const irishGrover = Irish_Grover({
 
 const IntroMarketplace: React.FC = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.header}>
-        <h1 style={{ ...styles.title, fontFamily: irishGrover.style.fontFamily }}>MARKETPLACE</h1>
-        <button style={{ ...styles.button, fontFamily: irishGrover.style.fontFamily }}>SEE MORE</button>
+    <div className="bg-[#A9B5DF] p-8 text-center">
+      <div className="flex justify-start items-center mb-8">
+        <h1 className={`text-4xl font-bold text-black mr-4 ${irishGrover.className}`}>MARKETPLACE</h1>
+        <a href="/marketplace">
+          <button className={`px-4 py-2 text-lg font-bold text-white bg-[#2D336B] rounded transition-colors duration-300 hover:bg-[#48A6A7] hover:text-black ${irishGrover.className}`}>
+            SEE MORE
+          </button>
+        </a>
       </div>
-      <div style={styles.itemsContainer}>
-        <Item imageSrc="/labubu.png" />
-        <Item imageSrc="/hirono.png" />
-        <Item imageSrc="/crybaby.png" />
-        <Item imageSrc="/spacemolly.png" />
+      <div className="flex justify-around items-center">
+        <Item imageSrc="/labubu.png" title="Labubu" price="₱7500" />
+        <Item imageSrc="/hirono.png" title="Hirono" price="₱5300" />
+        <Item imageSrc="/crybaby.png" title="Crybaby" price="₱9000" />
+        <Item imageSrc="/spacemolly.png" title="Space Molly" price="₱5400" />
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    backgroundColor: '#7886C7',
-    padding: '2rem',
-    textAlign: 'center' as 'center',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    marginBottom: '2rem',
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    color: 'black',
-    marginRight: '1rem',
-  },
-  button: {
-    padding: '0.5rem 1rem',
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    color: 'white',
-    backgroundColor: '#2D336B',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-  itemsContainer: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
 };
 
 export default IntroMarketplace;

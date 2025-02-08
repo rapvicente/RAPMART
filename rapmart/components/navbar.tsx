@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
           <Link href="/marketplace">MARKETPLACE</Link>
         </li>
         <li style={styles.navItem}>
-          <Link href="/faqs">FAQS</Link>
+          <Link href="/settings">SETTINGS</Link>
         </li>
       </ul>
     </nav>

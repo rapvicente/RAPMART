@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
                             className="p-2.5 border border-[#A9B5DF] rounded w-full h-24"
                         />
                     </label>
-                    <button type="submit" className={`bg-[#2D336B] text-[#FFF2F2] p-2.5 w-36 border-none rounded cursor-pointer mt-2.5 self-end ${irishGrover.className}`}>
+                    <button type="submit" className={`bg-[#2D336B] text-[#FFF2F2] p-2.5 w-36 border-none rounded cursor-pointer mt-2.5 self-end transition-colors duration-300 hover:bg-[#48A6A7] hover:text-black ${irishGrover.className}`}>
                         SUBMIT
                     </button>
                 </form>

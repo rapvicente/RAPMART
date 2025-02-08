@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Irish_Grover } from 'next/font/google';
 
@@ -9,7 +10,7 @@ const irishGrover = Irish_Grover({
 const AboutPage: React.FC = () => {
   return (
     <div className={`p-8 text-left ${irishGrover.className}`}>
-      <h1 className="text-4xl font-bold mb-8 text-black">About Us</h1>
+      <h1 className="text-4xl font-bold mb-8 text-[#2D336B]">About Us</h1>
       <div className="mt-4 overflow-hidden">
         <div className="w-full h-1 bg-gradient-to-r from-transparent via-[#2D336B] to-transparent animate-moveLine"></div>
       </div>
